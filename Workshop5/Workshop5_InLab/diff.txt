@@ -1,0 +1,14 @@
+In line number 17 of your output:
+The output should be:
+      J.R.R. Tolkien |  The Lord of the Rings |    UK | 1993 |  21.11 | Sauron has gathered to him all the Rings of Power, and he intends to use them to rule Middle-earth.
+                        ^
+But your output is: 
+      J.R.R. Tolkien |   The Lord of the Ring |    UK | 1993 |  21.11 | Sauron has gathered to him all the Rings of Power, and he intends to use them to rule Middle-earth.
+                        ^
+
+Unmatched character details:
+The character in column 25 is supposed to be:
+  [T] ASCII code(84)
+but you printed
+  [Space] ASCII code(32)
+

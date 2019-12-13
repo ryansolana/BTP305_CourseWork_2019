@@ -1,0 +1,47 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: Nov 2, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+////////////////
+// REFLECTION //
+////////////////
+
+Relative to the other workshops, I found that this workshop was very straightforward as due to the previous workshops
+that we have been working on, I had no longer been a stranger to creating tokens to parse data into instance variables.
+In this workshop I reinforced my knowledge on mostly: Token Creation, Template Functions, usage of STL containers,
+and inheritance.
+
+The in-lab portion of the workshop was very easy as it was just a matter of me creating tokens and parsing the data
+from a file which we have done before, and then preparing inheritance to derive the car constructor for use in the the racecar class
+in the at home section. For this created tokens for the normal car using getline with delimiters, and then inherited this in the
+Racecar class, and only adding additional implementation for the booster instance variables.
+
+Our autoshop class had an aggregation relationship with the cars, adding in vehicles using the += operator. Since they were just addresses,
+the autoshop did not control the lifespan of the vehicles, so that the vehicles could exist without the autoshop class. We maintained this by
+only pushing pointers into our autoshop container.
+
+Why do you need to deallocate the dynamically allocated memory in your vector?
+
+  We do this in order to avoid memory leaks. By not deallocating memory in our vector, it will remain as an allocated resource for the lifetime
+  of the program and start accumulating memory.
+
+When building an object from the input file, different things can go wrong: the record represents an unknown
+type of vehicle, or record contains invalid data. How can the function loadData() detect what went wrong? 
+Can you think at another solution than the one you have implemented?
+
+  Instead of throwing exceptions, an alternative implementation could involve replacing the incorrect values with something that
+  is detected to be similar, such as having a list of enums of different car brands, and then checking the values for a similar match.
+
+In this workshop you had to use std::list<sdds::Vehicle*> and std::vector<sdds::Vehicle*> to store a collection of vehicles as pointers. 
+Could you have used std::list<sdds::Vehicle> and std::vector<sdds::Vehicle> instead? Justify your answer!
+
+  Yes, we could have. However, it would be resource expensive and would involve copying the objects over and over for each object that was
+pushed into the container. By utilizing pointers, we are able to simply have one instance of that object in the program and just
+be pointing to its location in the container.
+
+In summary, this was a good workshop that served as a reminder of concepts that we learned earlier in the course and I learned how to
+execute the use of containers in this workshop.

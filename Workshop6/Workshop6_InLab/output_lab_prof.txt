@@ -1,0 +1,22 @@
+Script started on Fri 25 Oct 2019 09:15:19 PM EDT
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: cars.txt
+--------------------------
+
+--------------------------------
+| Cars in the autoshop!        |
+--------------------------------
+|     Toyota | new    | 157.00 |
+|      Honda | broken | 145.00 |
+|   Chrysler | new    | 173.00 |
+--------------------------------
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Fri 25 Oct 2019 09:15:19 PM EDT

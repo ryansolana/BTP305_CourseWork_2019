@@ -1,0 +1,51 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: November 12, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+//////////////////
+/// REFLECTION ///
+//////////////////
+
+Workshop 8: Smart Pointers
+
+I found that this workshop was very straightforward after reading the notes and was a good
+exercise in practicing the usage of raw pointers versus smart pointers.
+
+I also demonstrated concepts from 
+
+When implementing the element.h validate, I simply checked the instance variable m_price to see if
+its value was less than 0, and if it was I threw an error, otherwise it would not do anything.
+
+Both operators overloads for += were easy to implement as both only involved a push_back into the
+member instance list, only difference each being different from the parameters that they accepted,
+one being a normal raw pointer and the other being a unique pointer.
+
+I felt that the largest part of the lab and at home section were the mergeRaw and mergeSmart functions
+in utilities.cpp. In both these functions I performed two loops one for the size of desc and one of the size
+of price, particularly because desc had more elements than size. In each loop I checked if code matched
+for both instance variable lists and when they matched, I created a new object and placed it into a pointer
+For the raw pointer implementation (mergeRaw) created a raw pointer and dynamically allocated the object to it,
+then passed the pointer in to priceList using my += overload, deallocated its pointer and set it to
+null pointer, and returned pricelist. 
+
+For mergeSmart, it was a essentially the same thing except the main differences between
+using the smart pointers over the raw pointers is that I did not need to deallocate the
+memory as the smartpointer would handle that for me and that it collected the object into
+a container. This is an advantage because it reduces the risk of memory leaks due to negligence
+and also I am able to associate the smart pointer with a particular type, which in this case was Product.
+
+Quiz 7 Reflection:
+
+1. Unique pointers manage the pointer exclusively and shared pointers are able to manage the pointer
+between different instances. 
+
+2. it is a bad coding style because it is a type mismatch (missing const) and string literals cannot be modified
+and will break the program if something attempts to change the value of the variable.
+
+3. The advantage of using binary files over text files is that binary files can be accessed in the exact same form that
+it was saved in and is faster to read and write to.
+

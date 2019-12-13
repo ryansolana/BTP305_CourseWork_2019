@@ -1,0 +1,71 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: Sept 17, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+Create a text file named reflect.txt that contains your detailed description of the topics that you 
+have learned in completing this particular workshop and mention any issues that caused you difficulty
+and how you solved them. 
+
+Include in your explanation—but do not limit it to—the following points:
+- The reason for the significant time difference between the copy and move operations
+
+/////////////////
+// REFLECTION: //
+/////////////////
+
+In this workshop, I was comfortable executing the concepts taught in the lecture and in the notes so
+implementing them into the code was straightforward for me. I did however have to review how to use the iomanip
+library for the left and right justification and setw function, along with the string library introduced last semester
+to avoid using c-style strings.
+
+Completing this workshop helped me reinforce my knowledge of the following topics:
+
+- Usage of Std::Chrono Library, steady_clock member functions, duration cast
+
+When creating my class TimedEvents, I had included two instance variable that I set to object
+types of std:chrono:steady_clock:time_point, and when setting their times I used the member
+function now(). Once I had their times set at specific points of the program, I subtracted the
+end time from the start time in order to obtain the duration time of the ran function/operation.
+By using duration_cast I was able to cast my result into nanoseconds, and then used the count()
+member function to be able to display an integer value in the os stream.
+
+- Usage of Anonymous Functions, Usage of String Library, usage of std::string
+
+I declared and instantiated m_Records[7], setting its static value to 7, and provided it
+with instance variables std::string m_eventName, std::string m_unitsOfTime, and 
+std::chrono::steady_clock::duration m_duration. By using the string library, I did not have to null terminate
+when using c-style strings, avoiding the use of strncpy and strcpy. This simplified the use of strings in the class.
+In the program, I accessed a new element of m_Records every single time the program called recordEvent() and wrote to the instance variables.
+This way, near the end of the program, I was able to iterate through every m_Records[] element and display the contents of
+their instance variables by creating an overloaded insertion operator.
+
+- Usage of TypeDef
+
+I also used typedef to shorten the types I used for creating instance variables in my TimedEvents class
+to a word (example: std::chrono::steady_clock::duration SHORTENED TO duration) to avoid having to repeatitively 
+having to copy and paste or type out the long steady_clock library type name for the instance variables in question.
+
+- Usage of Move Constructor and Move Assignment operator
+
+In my Text Module, I upgraded it in this at-home section to have a Move Constructor and Move Assignment operator.
+These operations allowed me to steal resources to other objects that are expected to have their resources deallocated and use them
+instead of copying new resources that uses more computing power. I implemented the move constructor by using the implementation of move
+assignment operator (*this = std::move(src);) to avoid code repetition. The move constructor and move assignment
+operators were faster than the copy constructor and copy assigment operator due to the fact the program did not have to
+allocate new memory for the instance variable, and instead stole the resource from the object that was expected to die anyway.
+If I know that I have objects in programs that are expected to die in assignments that will work on in the future, I will use
+the move operator and assignment in order to speed up the program.
+
+Overall, I believe that doing this lab was a good learning experience in applying the concepts learned in the lecture and in the notes.
+
+Quiz 1 Reflection:
+
+1. My mistake was answering what three built in types are in C++. Three built in types in C++ are Arrays, Pointers, and References
+2. The difference between a struct and a union is that instance variables can access their own block of memory in structs,
+while in unions, all instance variables share a block of memory, so only one of them in the union can be used at a time.
+3. A forward class declaration is when you declare a class type without defining it, and it will be defined later in the scope.
+

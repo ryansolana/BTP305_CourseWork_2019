@@ -1,0 +1,27 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: Sept 14, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+Create a text file named reflect.txt that contains your detailed description of the topics that you have learned in
+completing this particular workshop and mention any issues that caused you difficulty and how you solved them. 
+Include in your explanation—but do not limit it to—the following points:
+
+the difference between internal and external linkage using examples from your code
+what are static variables and how were they useful in this workshop.
+the changes that you made in upgrading your String class.
+
+REFLECTION:
+
+In this workshop I was able to review my knowledge on the usage of overloading operators, dynamic memory, 
+copy constructors, and copy assignment constructors.
+
+I also was able to demonstrate my knowledge of external and internal linkage by using static and extern variables in the program.
+I did this by using static variables to create a counter that counts how many times a function was executed, along with using an
+external variable to declare it in one module, and define it in another.
+
+I upgraded my String class by changing char my_string[10] to char* my_string, that allowed me to give it dynamic memory in the program.
+I also added a copy constructor, copy assignment operator, and destructor to deal with the dynamic memory in the program. 

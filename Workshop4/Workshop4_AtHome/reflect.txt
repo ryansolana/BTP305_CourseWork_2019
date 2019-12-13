@@ -1,0 +1,54 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: Oct 5, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+Study your final solution, reread the related parts of the course notes, and make sure that you have understood the concepts covered by this workshop. This should take no less than 30 minutes of your time.
+
+Create a text file named reflect.txt that contains your detailed description of the topics that you have learned in completing this particular workshop and mention any issues that caused you difficulty and how you solved them. Include in your explanation—but do not limit it to—the following points:
+
+the difference between the implementations of a composition and an aggregation.
+the difference between the implementations of move and copy functions in a composition and an aggregation.
+
+////////////////
+// REFLECTION //
+////////////////
+
+This workshop was a straightforward, but required some review on the topic of Array of Pointers. After some experimentation I was able to understand the concepts necessary to go through this workshop.
+
+Completing this workshop helped reinforce my knowledge on the following topics:
+Composition and Aggregation class relationships, String class member functions,
+Array of Pointers, Move and Copy constructors with assignment operators overloading, Operator overloading (+=, -=, ==, <<), Iomanip functions
+
+Composition and Aggregation Relationship Classes:
+By creating the restaurant class, I was able to manage colletions of reservations that would not exist without the restaurant, demonstrating the concept of a composition relationship class. The messaging system, which has the ability to exist on its own, was created as an aggregation relationship class. The difference in implementation between the two relationships was that the composition relationship class used the reservation class to instantiate array data in the restaurant, along with the fact that the reservations would not exist without the restaurant; And the aggregation relationship class (ConfirmationSender) worked with reservations in order to create confirmations and display them on the screen. I felt that it was also much easier to implement a composition relationship.
+
+String Class Member Functions:
+In the reservation class's custom constructor, I used member functions to parse strings from a large string recieved as a parameter. We placed these strings into tokens using a series of if statements and member functions. I used erase() along with remove_if() to remove whitespace in each line that was provided to me, then used find() in order to search for the delimiters that seperated the tokens and used erase again to clear part of the string I did not need anymore.
+
+Array of Pointers:
+As each element in m_reservations in the Restaurant class was a reservation from Reservation, I was able to create an array of pointers by running a for loop for the size of the reservation collection, and copied every element from the collection in to reservation collection of the restaurant. I also did a similar procedure when implementing the copy assignment operator for ConfirmationSender, copying the reservations from one confirmation sender objects to another.
+
+Move and Copy Constructors:
+The move and copy constructors along with their respective operator overloads were a little different between the composition classes and the aggregation class.
+For the composition classes, I deallocated memory in each of their move and copy constructors, but did not do the same for ConfirmationSender as it would not work if I did.
+
+Operator Overloading:
+I overloaded the operators += and -= in ConfirmationSender in order to add in reservations into ConfirmationSender objects, resizing the size variable
+and allocating memory as necessary. For += I first checked for the index of res in the array, if it did not exist already, I would resize the array and send that index
+to the end so the new res would have room in the array, I did a similar process for -= except took away memory as required. For both I created
+a temp array and then once I filled the elements of each array, I set the address of the reservation array to the temp array. To avoid code duplication,
+I created helper function called findResIndex so that I would be able to compare all of the values in each reservation to see if that reservation matched
+the checked index, overloading operator (==) to compare objects.
+
+Iomanip functions:
+I used the iomanip library in order to setw and left and right justify objects when os displaying them.
+
+
+This workshop was a good learning experience and helped me learn and execute concepts that I also had previously learned before.
+
+// Quiz Reflection //
+All questions were answered correctly

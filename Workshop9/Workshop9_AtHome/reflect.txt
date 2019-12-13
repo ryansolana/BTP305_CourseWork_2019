@@ -1,0 +1,40 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: November 21, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+//////////////
+//REFLECTION//
+//////////////
+
+I found that this workshop was very easy. It was very straightforward in allowing me to execute the concepts
+needed to finish this lab which includes making use of the ofstream and ifstream libraries in order to read and
+write in binary. I also made use of the thread classes in order to perform multithreading in this application.
+
+For the backup function I opened the file in binary using the ofstream constructor and then used the write member function to access
+the text file and write to it with the size of nbytes in the program. I then closed the program.
+
+For the restore function I opened the the binary file using the ifstream constructor and then I allocated
+dynamic memory into a char pointer in the size of nbytes and then read for the same size as well.
+
+I implemented multithreading by binding the function converter to its parameters using std::bind
+and then created a lambda to set encoded to !encoded and then created threads for both processess and joined them.
+
+It was necessary to use binary files so that the exact state of the file would be saved and the integrity of the file
+would be the same after each read and write.
+
+Why it would be important to bind a function to its arguments, and how was it useful in this workshop
+It was important to bind the function to its arguements so that a thread could be constructed using it.
+
+The advantages of using multiple threads, and how did you accomplished multi-threading in this workshop
+The advantages of using multiple threads is to split the workload among the cpus in the computer so that
+there is less load within one cpu.
+
+Quiz Reflection:
+
+2. Context switching is the process of saving/storing the state of a process or of a thread so it can be executed 
+later on in the program.
+

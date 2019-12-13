@@ -1,0 +1,81 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: Oct 19, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+Create a text file named reflect.txt that contains your detailed description of the topics that you have learned in completing this particular workshop and mention any issues that caused you difficulty and how you solved them. Include in your explanation—but do not limit it to—the following points:
+
+the difference between the implementations/utilizations of a functor and a lambda expression. When is appropriate to use each one?
+
+the constructor for SpellChecker generates an exception in certain conditions. How would you change your code to achieve the same result, but without exceptions (both on the constructor and on the client side)? Compare the two solutions.
+
+the classes Movie and Book contain almost identical logic in loading data from the file. How would you redesign the classes in order not to duplicate that logic?
+
+the classes Movie and Book are instantiated from the main() function using a custom constructor, but they also contain a default constructor. Is the default constructor necessary? Could you remove it? Justify your answer.
+
+////////////////
+// REFLECTION //
+////////////////
+
+This workshop was a challenge. I was definitely tested on my knowledge of how to use the string library including
+find, replace, substr, etc; along with the usage of lambda functions, function pointers, and usage of templates to avoid
+duplication of code. Otherwise, with enough work and communication with my peers, I managed to complete the workshop on time.
+
+Completing this workshop helped reinforce my knowledge on the following topics:
+Template classes, lambdba functions, Pointer functions, Operator overloading (+=, -=, ==, <<), 
+String, and Functors.
+
+String Class Member Functions:
+In the book and movie classes, I used a series of string functions to parse strings into tokens stored as instance variables for the objects
+just like the last lab. 
+
+Template Functions:
+We used a template class to help manage a collection of Books and movies in our program. To avoid code duplication I used two helper functions which allowed me
+to find the index of an already existing object (findItemIndex), along with a function that checked this index to decide whether or not to add a new item into a the collection (addItem).
+By implementing setObserver, I was able to use separate instances of collection based on the type of object I was using.
+
+Lambda Functions:
+We used a lambda function in order to convert the prices of books depending on their year and country of publishing. We set an anonymous function to a variable of
+convertPrice which checked the couuntry and origin in order to determine how to change the price.
+
+Functors:
+We created a spellchecker class that acts like a utility function that allowed us to replace bad words in a string, replacing them as necessary. In the implementation,
+I checked an entire line one by one for bad words, if I found it, I replaced that badword at its position with its goodWord identical, that shared the same index value in their own arrays. By
+looping for each element of bad word, and making it so that their good word equivalent had the same index, I was able to do this. This was done during the setup process, parsing the bad and good words
+through token creation from strings from a file.
+
+
+//////////////////
+Reflect Questions:
+//////////////////
+
+1. The difference between a lambda function and a functor is that a lambda function is an anonymous function that can be declared and defined inline
+when wanting to instantiate a variable using logic or can be passed into another function as a parameter that returns a value; while a functor
+is a class that can be used as a function through overloading of their () operator. While lambda functions are functions, functors are classes that can act
+like functions.
+
+2. This can be done by when recieving a bad file name, it can change all of the instance variables to a safe empty state that will suggest that nothing was able to be parsed into tokens
+since there was nothing valid to parse tokens from. Exceptions can be done to prevent the program from continuing and storing garbage data.
+
+3. By creating another class called Item or something simular that can represent both classes, I can create functions that both 
+ie and book classes can inherit. This will prevent code duplication from occuring.
+
+4. We can remove it, however it is good practice to keep it there in case we do choose to create empty objects in a safe empty state to initialize later on.
+
+This workshop was once again a good learning experience and helped me learn and execute concepts that would help me prevent code duplication
+and increase overall maintainability of my code for future projects.
+
+////////////////
+Quiz Reflection:
+////////////////
+I missed the quiz the week before the exam so I will be compensating for it here.
+
+1. Types of containers: Stack, Queue, and List
+
+2. Iterators are used to point to specific elements in a sequence.
+
+3. Function objects, also known as functors, are classes that can act like functions by overloading their () operator
+

@@ -1,0 +1,14 @@
+In line number 40 of your output:
+The output should be:
+| (You Drive Me) Crazy | Britney Spears  | Baby One More Time   |   1999 | 3:18 | 1.29 |
+  ^
+But your output is: 
+| Why so Serious?      | Hans Zimmer     | Best of              |   2016 | 9:14 | 1.29 |
+  ^
+
+Unmatched character details:
+The character in column 3 is supposed to be:
+  [(] ASCII code(40)
+but you printed
+  [W] ASCII code(87)
+

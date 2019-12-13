@@ -1,0 +1,70 @@
+// Name: Ryan Solana 
+// Seneca Student ID: 126845171
+// Seneca email: rsolana@myseneca.ca
+// Date of completion: Nov 5, 2019
+//
+// I confirm that the content of this file is created by me,
+// with the exception of the parts provided to me by my professor.
+
+////////////////
+// REFLECTION //
+////////////////
+
+I felt that this workshop was quite straightforward. I felt that along with having a firm understanding of all the other concepts
+taught in the course, knowing how to the use the algorithm and numeric library and how to use the built in functions and its parameters
+were important to completing this workshop.
+
+In this workshop I reinforced my knowledge of: STL Containers, iterators, usage of the numeric and algoithm libraries,
+ostream overloading, and usage of the string library.
+
+In the song constructor, I created instance variables that would hold all of the token values for the song, parsed the line
+into tokens that was provided to constructor, and trimmed the spaces out. This constructor was called when
+I generated a temporary song in the song collection using passing the line as a parameter, and then pushing the temporary song 
+object into the m_songs collection vector. When displaying them I used accumulate in order to iterate through
+the elements of my vector and use the lambda to get the total seconds of all of the songs, and then
+using for each in order to display all of the songs individual lengths. I was able to turn the length in seconds
+into minutes:seconds by dividing the seconds by 60 and the seconds by % 60 to get the remainder after accounting
+for the minutes. Getting all of the songs for an artist, I created a temporary list that I would later return and
+made its size the size my songs vector and then copied all of the songs that matched the artistName parameter
+into the list and returned that list. 
+
+At first I found that using some of the algorithm functions a little confusing
+due to their parameters but after running through examples of their use, I was able to understand how to use
+then.
+
+In summary, I felt like the workshop was a pretty good learning experience towards implementing containers
+and iterators with the algorithm and numeric libraries.
+
+///// Questions: /////
+
+List all the STL functions that you have used in this workshop; explain your reasoning for choosing each one, and not another.
+1. copy_if - I used this to check for a conditional that if the current iteration meets the conditions of the
+lamdba, to copy the current element into the destination element
+
+2. any_of - I used this along with a lambda conditional function to return a boolean based on if what is being iterated
+meets the conditions, returning true or false 
+
+4. for_each - For each iterates for every element in a container and performs the lambda function on each element
+
+5. accumulate - Accumulate was used in order to get the sum of values for each element that was iterated in the containers
+selected.
+
+Present the advantages of using STL algorithms vs. implementing the functionality by yourself using loops.
+
+The advantage these stl algorithms already have the functionality implemented for us in the library so we are
+able to use less code when writing our program. Its also more efficient to do so this way.
+
+The function that sorts the collection of songs receives as a parameter the field name to use; 
+this can create errors if the client specifies an invalid field (or misspells it). 
+How would you redesign that function to prevent the client to specify an invalid string, 
+allowing any error to be detected by the compiler?
+
+I would redesign the function by throwing an exception whenever a condition is met that recognizes that the function
+is wrong, or set the object to a safe state 
+
+
+///// Quiz Reflection: /////
+
+2. The difference between Forward lists and deques are that deques are like vectors and use dynamic memory, while forward lists
+do not use dynamic memory.
+
